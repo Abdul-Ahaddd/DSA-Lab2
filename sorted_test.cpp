@@ -46,7 +46,7 @@ void testNegativeValues()
     cout << "testNegativeValues passed\n";
 }
 
-// Two additional tests you designed
+// Two additional tests
 void testEmptyArray()
 {
     int arr[] = {};
@@ -73,4 +73,14 @@ int main()
     testAllEqualElements();
     cout << "\nAll tests passed!\n";
     return 0;
+}
+
+bool isSorted(const int *arr, const int size)
+{
+    for (int i = 0; i < size - 1; i++)
+    {
+        if (arr[i] > arr[i + 1])
+            return false; // fixed
+    }
+    return true;
 }
